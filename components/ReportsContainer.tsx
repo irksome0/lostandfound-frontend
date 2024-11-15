@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { createPortal } from "react-dom"
+import { ReportModal } from "./ReportModal"
 createPortal
 
 export const ReportsContainer = () => {
@@ -18,7 +19,7 @@ export const ReportsContainer = () => {
             <button onClick={
                 () => setDisplayModal(prev => !prev)
             }>Create report</button>
-            {displayModal ? createPortal()}
+            {displayModal && createPortal(<ReportModal/>,document.body)}
         </section>
     )
 }

@@ -22,3 +22,7 @@ export interface HeaderProps{
 export interface UserContainerProps{
     user:User,
 }
+
+export interface ReportModalProps{
+    closeModal: () => void,
+}
