@@ -3,14 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #a0ccff;
+  --foreground: #1d1f29;
+  --secondary-foreground:#cebac0;
+  --smth: #4D4C7D;
+  --smth1: #827397;
+  --wow: #D8B9C3;
+
+  --f: #0d193b;
+  --s: #23568f;
+  --t: #a0ccff;
+  --fr: #f8e4ff;
+  -ff: #1d1f29;
+
+  --background-primary: #0d193b;
+  --background-secondary: #a0ccff;
+  --background-tertiary: #0d193b1A;
+  --background-quaternary: rgba(248, 228, 255, 0.75);
+
+  --button-base: #23568f;
+  --button-secondary: rgba(35, 86, 143, 0.45);
+  --button-tertiary: rgba(35, 86, 143, 0.25);
+  --button-alt-base: #f8e4ff;
+  --button-alt-secondary: #f8e4ffCC;
+  --button-alt-tertiary: #f8e4ff99;
+
+  --border-base: rgba(248, 228, 255,0.5);
+  --border-secondary: #1d497a;
+  --border-tertiary: #173960;;
+  --border-base-secondary: rgba(248, 228, 255,0.45);
+
+  --text-primary:#1d1f29;
+  --text-secondary: #f8e4ff;
+  --text-tertiary: #ddcce3;
+  --text-quaternary:#31333b;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #a0ccff;
+    --foreground: #1d1f29;
   }
 }
 
