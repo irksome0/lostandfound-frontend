@@ -7,6 +7,9 @@ import {User} from "@/typings"
 import Header from "@/components/Header";
 import { UserContainer } from "@/components/UserContainer";
 import { ReportsContainer } from "@/components/ReportsContainer";
+import { cookies } from "next/headers";
+import { getReports } from "@/utils/getReports";
+import { ReportsList } from "@/components/ReportsList";
 
 export default function Profile(){
     const [user,setUser] = useState<User|null>(null);
@@ -17,7 +20,7 @@ export default function Profile(){
     },[])
 
     const test = () => {
-        console.log(new Date().toISOString())
+        getReports().then(res => console.log(res));
     }
     if (user){
         if (user?.role === "Administrator"){
@@ -30,13 +33,16 @@ export default function Profile(){
         return(
             <div>
                 <Header user={user}/>
-                <main>
-                    <div className="flex flex-col gap-4">
+                <main className="flex flex-row gap-6">
+                    <div className="flex flex-col gap-4 w-2/5">
                         <UserContainer user={user as User}/>
                         <ReportsContainer/>
                     </div>
+                    <div className="w-3/5">
+                        <ReportsList/>
+                    </div>
                 </main>
-                <button onClick={() => test()}>Click</button>
+                {/* <button onClick={() => test()}>Click</button> */}
             </div>
         )
     }
